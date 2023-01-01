@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Airplane Online Ticket Booking System Admin Panel</title>
+  <link rel="stylesheet" href="/project 21/Admin/admin.css">
+</head>
+<body>
+  <h1 class="head">Airplane Online Ticket Booking System Admin Panel</h1>
+  <!-- navigation -->
+  <div class="wrapper">
+    <nav>
+        <ul>
+            <li><a href="/project 21/Home/home.html">Home</a></li>
+            <li><a href="#">Passengers</a></li>
+            <li><a href="#">flights</a></li>
+            <li><a href="/project 21/Loging and Register/login.html">log out</a></li>
+            <!-- <li><a href="#"></a></li> -->
+        </ul>
+    </nav>
+</div>
+  <!-- Add new flights form -->
+  <h2>Add New Flight</h2>
+  <form id="add-flight-form">
+    <label for="flight-number">Flight Number:</label><br>
+    <input type="text" id="flight-number" name="flight-number"><br>
+    <label for="departure-city">Departure City:</label><br>
+    <input type="text" id="departure-city" name="departure-city"><br>
+    <label for="arrival-city">Arrival City:</label><br>
+    <input type="text" id="arrival-city" name="arrival-city"><br>
+    <label for="departure-time">Departure Time:</label><br>
+    <input type="text" id="departure-time" name="departure-time"><br>
+    <label for="arrival-time">Arrival Time:</label><br>
+    <input type="text" id="arrival-time" name="arrival-time"><br><br>
+    <input class="btn" type="submit" value="Add Flight">
+  </form> 
+  
+  <!-- Passenger search form -->
+  <h2>Search for Passengers</h2>
+  <form id="search-passengers-form">
+    <label for="customer-id">Customer ID:</label><br>
+    <input type="text" id="customer-id" name="customer-id"><br><br>
+    <input class="btn" type="submit" value="Search">
+  </form> 
+
+  <!-- flight details -->
+  <h2>View All Bookings of searched Flight</h2>
+  <table id="flight-table">
+    <tr>
+      <th>Flight Number</th>
+      <th>Departure City</th>
+      <th>Arrival City</th>
+      <th>date</th>
+      <th>Departure Time</th>
+      <th>Arrival Time</th>
+        <th>Actions</th>
+    </tr>
+    <!-- Add rows for each booking here -->
+    <tr>
+      <td>AA123</td>
+      <td>Colombo</td>
+        <td>London</td>
+      <td>2022-01-01</td>
+      <td>04:00</td>
+        <td>06:00</td>
+      <td>
+        <button class="edit-button">Edit</button>
+        <button class="delete-button">Delete</button>
+      </td>
+    </tr>
+  </table>
+  <!-- Flights search form -->
+  <h2>Search for Flights</h2>
+  <form id="search-flights-form">
+    <label for="flight-id">Flight ID:</label><br>
+    <input type="text" id="flight-id" name="flight-id"><br><br>
+    <input class="btn" type="submit" value="Search">
+  </form> 
+
+  <h2>View All Bookings of searched Flight</h2>
+  <table id="bookings-table">
+    <tr>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Date</th>
+      <th>Flight</th>
+      <th>Actions</th>
+    </tr>
+    <!-- Add rows for each booking here -->
+    <tr>
+      <td>John Smith</td>
+      <td>john@example.com</td>
+      <td>2022-01-01</td>
+      <td>ABC123</td>
+      <td>
+        <button class="edit-button">Edit</button>
+        <button class="delete-button">Delete</button>
+      </td>
+    </tr>
+  </table>
+  
+  <!-- View all bookings table -->
+  <h2>View All Bookings</h2>
+  <table id="bookings-table">
+    <tr>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Date</th>
+      <th>Flight</th>
+      <th>Actions</th>
+    </tr>
+    <!-- Add rows for each booking here -->
+    <tr>
+      <td>John Smith</td>
+      <td>john@example.com</td>
+      <td>2022-01-01</td>
+      <td>ABC123</td>
+      <td>
+        <button class="edit-button">Edit</button>
+        <button class="delete-button">Delete</button>
+      </td>
+    </tr>
+  </table>
+  <script>
+    const currentURL = window.location.href;
+    console.log(currentURL); // outputs the URL of the current page
+  </script>
+</body>
+</html>
+     

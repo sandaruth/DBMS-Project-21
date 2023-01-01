@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Login</title>
+    <style>
+        body {
+          background-color: gray;
+        }
+        .login-container {
+          width: 500px;
+          margin: 0 auto;
+          text-align: center;
+          padding: 20px;
+          border: 1px solid black;
+          border-radius: 5px;
+        }
+        input {
+          display: block;
+          width: 100%;
+          margin: 10px 0;
+          padding: 10px;
+          border: 1px solid black;
+          border-radius: 5px;
+        }
+        button {
+          background-color: blue;
+          color: white;
+          padding: 10px;
+          border: none;
+          border-radius: 5px;
+          cursor: pointer;
+        }
+      </style>
+</head>
+<body>
+  <div class="login-container">
+    <h1>Log In</h1>
+    <form>
+      <input type="text" name="username" id="username" placeholder="Username" required>
+      <input type="password" name="password" id="password" placeholder="Password" required>
+      <button type="submit" id="login-button" onclick="auth()">Log In</button>
+    </form>
+  </div>
+  <script>
+    function auth(){
+    var user = document.getElementById('username').value;
+    var pass = document.getElementById('password').value;
+    if(user == 'sanda' && pass == 'Sanda@2000'){
+      window.location.assign('admin.html');
+      alert("logging succes");
+    }
+    else{
+      alert('Incorrect username or password');
+      return;
+    }
+  }
+  </script>
+</body>
+</html>

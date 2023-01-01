@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/9b207dd34b.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="login.css">
+    <title>Log in</title>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="logo"> B Airline <i class="fa-solid fa-plane"></i>
+            <nav>
+                <ul>
+                    <li><a href="/project 21/Home/home.html">Home</a></li>
+                    <li><a href="/project 21/feedback/feedback.html">Feed Back</a></li>
+                    <li><a href="/project 21/Booking/book.html">book</a></li>
+                    <li ><a class="log" href="login.html">Login</a></li>
+                    <li><a href="/project 21/Admin/adminLogin.html">admin Login</a></li>
+                    
+                </ul>
+            </nav>
+            <i class="fa-solid fa-bars"></i>
+        </div>
+        
+        <div class="form-box">
+             <div class="button-box">
+                <div id="btn"></div>
+                <button type="button" class="toggle-btn" onclick="login()"><b>Log in</b></button>
+                <button type="button" class="toggle-btn" onclick="register()"><b>Register</b></button>
+             </div> 
+            <div class="social-icons">
+                <ul>
+                    <li><a href="#"><i class="fa fa-google fa-fw" aria-hidden="true"></i></a></li>
+                    <li><a href="#"><i class="fa fa-facebook fa-fw" aria-hidden="true"></i></a></li>
+                    <li><a href="#"><i class="fa fa-linkedin-square fa-fw" aria-hidden="true"></i></a></li>
+                </ul>
+            </div>
+            <form id="login" class="input-group">
+                <input type="text" class="input-field" placeholder="User ID" required>
+                <input type="text" class="input-field" placeholder="Enter Password" required>
+                <input type="checkbox" class="check-box"><span>Remember Password</span>
+                <button type="submit" class="submit-btn"><b>Log in</b></button>
+            </form>
+
+            <form id="register" class="input-group">
+                <input type="text" class="input-field" placeholder="User ID" required>
+                <input type="email" class="input-field" placeholder="Email" required>
+                <input type="text" class="input-field" placeholder="Enter Password" required>
+                <input type="checkbox" class="check-box"><span>Remember Password</span>
+                <button type="submit" class="submit-btn"><b>Register</b></button>
+            </form>
+ 
+    </div>
+    <script>
+        var x= document.getElementById("login");
+        var y= document.getElementById("register");
+        var z= document.getElementById("btn");
+
+        function register(){
+            x.style.left="-400px";
+            y.style.left="50px";
+            z.style.left="110px";
+        }
+        function login(){
+            x.style.left="50px";
+            y.style.left="450px";
+            z.style.left="0px";
+        }
+    </script>
+    <script>
+        let menuicon = document.querySelector('.fa-bars');
+        var navigation =document.querySelector('nav');
+        menuicon.onclick = function(){
+            if(menuicon.classList.contains('fa-bars')){
+                menuicon.classList.remove('fa-bars');
+                menuicon.classList.add('fa-times');
+                navigation.className="expand";
+            }
+            else{
+                menuicon.classList.remove('fa-times');
+                menuicon.classList.add('fa-bars');
+                navigation.className="";
+            }
+    
+        }
+    </script>
+</body>
+</html>
